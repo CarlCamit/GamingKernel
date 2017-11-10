@@ -9,5 +9,8 @@ Game.create!(name: "Legend of Zelda: Majora's Mask", description: "creepy masks"
 Game.create!(name: "The Last of Us", description: "i'm not touching your stupid pile")
 Game.create!(name: "Dark Souls", description: "enjoyable torture")
 
+User.create!(email: "a@a", password: "aaaaaa")
+User.create!(email: "b@b", password: "bbbbbb")
+
 Listing.create!(price: 24.99, condition:"new", details:"brand new copy of megaman x5 sealed for psx", game_id:1, user_id:1)
 
