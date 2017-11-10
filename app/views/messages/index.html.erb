@@ -1,0 +1,35 @@
+<div>
+    <% if @limit_display %>
+        <%= link_to "Previous Messages", 'm?=all' %>
+    <% end %>
+</div>
+
+<div>
+    <% @messages.each do |message| %>
+        <% if message.body %>
+            <% user = User.find(message.user_id) %>
+            <div>
+                <div>
+                    <div>
+                        <strong><%= user.email %></strong><%= message.created_at.strftime("%m/%d/%y at %l:%M %p") %>
+                    </div>
+                    <div>
+                        <div>
+                            <%= message.body %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+</div>
+
+<%= form_with(model: [@conversation, @message]) do |form| %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
+    <div>
+        <%= form.text_area :body %>
+    </div>
+    <div>
+        <%= form.submit "Send" %>
+    </div>
+<% end %>

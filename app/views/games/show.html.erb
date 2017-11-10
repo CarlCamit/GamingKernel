@@ -1,3 +1,14 @@
-<h1><%= @game.name %></h1>
+<div>
+    <h1><%= @game.name %></h1>
+    <%= @game.description %>
+</div>
 
-<%= @game.description %>
+<div class="list-group">
+    <% @listings.each do |listing| %>
+        <div class="list-group-item">
+            <%= link_to listing.id, listing_path(listing) %>
+        </div>
+    <% end %>
+</div>
+
+<%= link_to "Back", games_path %> 

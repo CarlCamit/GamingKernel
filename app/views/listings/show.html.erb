@@ -1,0 +1,15 @@
+<h1>Listing Title</h1>
+
+<%= link_to @listing.game.name, game_path(@listing.game) %>
+
+<p><%= @listing.price %></p>
+<p><%= @listing.condition %></p>
+<p><%= @listing.details %></p><br>
+
+<% if user_signed_in? %>
+    <% if current_user.id != @listing.user.id %>
+        <%= link_to "Message", conversations_path(sender_id: current_user.id, recipient_id: @listing.user.id), method: :post %>
+    <% end %>
+<% end %>
+
+<%= link_to "Home", root_path %>

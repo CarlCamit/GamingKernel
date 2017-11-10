@@ -1,8 +1,9 @@
 <h1>All Games</h1>
 
-
-<% @games.each do |game| %>
-    <div>
-        <%= link_to game.name, game_path(game) %>
-    </div>
-<% end %>
+<div class="list-group">
+    <% @games.each do |game| %>
+        <div class="list-group-item">
+            <%= link_to game.name, game_path(game) %>
+        </div>
+    <% end %>
+</div>

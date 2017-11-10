@@ -1,24 +1,13 @@
-# README
+## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Design Process
 
-Things you may want to cover:
+[Trello Board]: https://trello.com/b/tTMbtWk4/two-sided-marketplace-project
 
-* Ruby version
+[Figma]: https://www.figma.com/file/NhVKCAiL6l5ChuAKtpIyiTUs/Major-Project-Figma
 
-* System dependencies
+![ERD](https://dbdesigner.net/designer/schema/125777)
 
-* Configuration
+### Presentation
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Powerpoint]: https://docs.google.com/presentation/d/1wvP1D1M5JIzPh1z50lthmAYWo-6QAYzobOfAljc3FIw/edit#slide=id.g29b72d6d84_0_164
